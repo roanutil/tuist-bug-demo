@@ -5,5 +5,8 @@ import PackageDescription
 let package = Package(
     name: "lib",
     products: [.library(name: "TuistTestCore", targets: ["TuistTestCore"])],
-    targets: [.target(name: "TuistTestCore")]
+    targets: [.target(
+        name: "TuistTestCore",
+        swiftSettings: [.enableUpcomingFeature("StrictConcurrency")]
+    )]
 )
